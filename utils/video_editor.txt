@@ -2,28 +2,21 @@
 
 ## ETAPA 1: CONFIGURAÇÃO INICIAL
 1. Instalar dependências básicas:
-   npm install @uploadthing/react uploadthing
+   npm install react-dropzone
 
-2. Estrutura de pastas:
-   src/
-     ├── components/
-     │   └── video/
-     ├── lib/
-     │   └── uploadthing/
-     └── app/
-         └── editor/
-
-## ETAPA 2: SISTEMA DE UPLOAD
-1. Configurar UploadThing
-   - Criar rotas de API
-   - Configurar limites de upload
-   - Implementar handlers de upload
+## ETAPA 2: SISTEMA DE UPLOAD LOCAL
+1. Configurar Gerenciamento de Arquivos
+   - Implementar lógica de leitura de arquivos
+   - Definir limites de tamanho
+   - Validar tipos de arquivo permitidos
+   - Criar sistema de armazenamento em memória
 
 2. Componentes de Upload
-   - Interface de drag-and-drop
-   - Preview de vídeo
-   - Barra de progresso
-   - Feedback visual
+   - Interface de drag-and-drop com react-dropzone
+   - Preview de vídeo usando URL.createObjectURL
+   - Barra de progresso para carregamento
+   - Feedback visual de status
+   - Gerenciamento de memória (cleanup de URLs)
 
 ## ETAPA 3: PLAYER DE VÍDEO BÁSICO
 1. Instalar FFmpeg:
