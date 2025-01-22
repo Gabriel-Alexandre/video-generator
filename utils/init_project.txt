@@ -1,0 +1,52 @@
+# Inicialização do Projeto Next.js
+npx create-next-app@latest video-generator
+# Opções selecionadas:
+# - TypeScript: Yes
+# - ESLint: Yes
+# - Tailwind CSS: Yes
+# - src/ directory: Yes
+# - App Router: Yes
+# - Import alias: Yes
+
+# Entrar na pasta do projeto
+cd video-generator
+
+# Instalar dependências principais
+npm install @hookform/resolvers@3.10.0 zod@3.24.1 react-hook-form@7.54.2 lucide-react@0.473.0
+
+# Instalar dependências de desenvolvimento
+npm install -D class-variance-authority@0.7.1 clsx@2.1.1 tailwind-merge@2.6.0 tailwindcss-animate@1.0.7
+
+# Instalar Radix UI
+npm install @radix-ui/react-slot@1.1.1
+
+# Instalar e configurar shadcn-ui
+npx shadcn@latest init
+# Opções selecionadas:
+# - Style: Default
+# - Base color: Slate
+# - CSS variables: Yes
+# - React Server Components: Yes
+# - Components directory: @/components
+# - Utils directory: @/lib
+# - Include CSS reset: Yes
+
+# Criar estrutura de pastas
+mkdir -p src/app/(auth)
+mkdir -p src/components/ui
+mkdir -p src/components/common
+mkdir -p src/hooks
+mkdir -p src/lib
+mkdir -p src/types
+
+# Instalar componentes do shadcn (exemplos básicos)
+npx shadcn@latest add button
+npx shadcn@latest add input
+npx shadcn@latest add form
+
+# Criar arquivo de variáveis de ambiente
+echo "NEXT_PUBLIC_API_URL=http://localhost:3000/api" > .env.local
+echo ".env*" >> .gitignore
+
+# Iniciar o servidor de desenvolvimento
+npm run dev
